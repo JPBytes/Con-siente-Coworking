@@ -11,6 +11,7 @@ const { title, body } = Astro.props;
   const $body = document.querySelectorAll(".body");
   const $shows = document.querySelectorAll(".fa-chevron-down");
   const $hiddens = document.querySelectorAll(".fa-chevron-up");
+  const $accordion = document.querySelectorAll(".accordion");
 
   for (let i = 0; i < $shows.length; i++) {
     $shows[i].addEventListener("click", () => {
@@ -25,9 +26,17 @@ const { title, body } = Astro.props;
       $shows[i].classList.remove("hidden");
     });
   }
+
+  for (let i = 0; i < $accordion.length; i++) {
+    $accordion[i].addEventListener("click", () => {
+      $body[i].classList.toggle("hidden");
+      $hiddens[i].classList.toggle("hidden");
+      $shows[i].classList.toggle("hidden");
+    });
+  }
 </script>
 
-<div class="accordion">
+<div class="accordion cursor-pointer">
   <div class="header flex items-center justify-between">
     <h4 class="title text-2xl">{title}</h4>
     <i class="fa-solid fa-chevron-up hidden"></i>

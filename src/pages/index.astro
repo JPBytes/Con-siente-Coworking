@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Service from "../components/Service.astro";
 import Prices from "../components/Prices.astro";
 import Services from "../components/Services.astro";
+
+import Popular from "../components/Icons/Popular.astro";
 ---
 
 <Layout title="Con-siente CoWorking.">
@@ -97,11 +99,40 @@ import Services from "../components/Services.astro";
     <h3 class="font-bold mt-4 text-2xl">Andres</h3>
   </section>
 
-  <section class="mb-24">
+  <section class="mb-24 p-3">
     <h2 class="my-10 text-3xl font-Lato mx-auto text-center">
       Tabla de precios
     </h2>
-    <Prices />
+    <div class="flex gap-2 justify-center md:flex-row flex-col">
+      <Prices
+        title="Espacio de trabajo compartido"
+        price="$100.000"
+        body="Un lugar ideal para colaborar y crear"
+        adventage1="Flexibilidad"
+        adventage2="Comunidad"
+        adventage3="Wi-Fi"
+      />
+
+      <Prices
+        title="Espacio privado"
+        price="$200.000"
+        body="Tu propio espacio para trabajar con comodidad"
+        adventage1="Privacidad"
+        adventage2="Comodidad"
+        adventage3="Wi-Fi"
+      >
+        <Popular /></Prices
+      >
+
+      <Prices
+        title="Oficina completamente privada"
+        price="$300.000"
+        body="Un espacio completamente privado para tu negocio"
+        adventage1="Exclusividad"
+        adventage2="Privacidad"
+        adventage3="Wi-Fi"
+      />
+    </div>
   </section>
 
   <section
@@ -171,7 +202,7 @@ import Services from "../components/Services.astro";
         <a href="/"
           ><button
             type="submit"
-            class="bg-azul-marino text-white py-3 px-8 rounded-xl"
+            class="bg-azul-marino text-white py-3 px-8 rounded-xl hover:bg-gris hover:text-white transition-colors"
             >Enviar</button
           ></a
         >
