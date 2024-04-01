@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Service from "../components/Service.astro";
 import Prices from "../components/Prices.astro";
+import Services from "../components/Services.astro";
 ---
 
 <Layout title="Con-siente CoWorking.">
@@ -79,7 +80,7 @@ import Prices from "../components/Prices.astro";
       class="w-28 rounded-full"
     />
     <p class="text-xl mt-4 font-Poppins text-gris">
-      Consiente Coworking es increible. El ambiente es acogedor, el personal es
+      Consiente CoWorking es increible. El ambiente es acogedor, el personal es
       amable y atento, y las instalaciones son modernas y cómodas. Gracias por
       proporcionar un espacio de trabajo tan maravilloso, ¡Definitivamente
       recomendado!
@@ -87,8 +88,88 @@ import Prices from "../components/Prices.astro";
     <h3 class="font-bold mt-4 text-2xl">Andres</h3>
   </section>
 
-  <section>
-    <h2 class="text-center text-bold text-3xl">Tabla de precios</h2>
+  <section class="mb-24">
+    <h2 class="my-10 text-3xl font-Lato mx-auto text-center">
+      Tabla de precios
+    </h2>
     <Prices />
+  </section>
+
+  <section class="flex flex-col w-[80%] m-auto gap-10 mb-44">
+    <h2 class="my-10 text-3xl font-Lato mx-auto">Preguntas frecuentes</h2>
+    <Services
+      title="¿Que tipo de espacios ofrecen?"
+      body="Ofrecemos areas de trabajo compartidas , salas de reuniones y espacios privados para trabajar de manera eficiente"
+    />
+    <Services
+      title="¿Proporcionan servicios adicionales?"
+      body="Si, ofrecemos servicios como la impresion,escaneo,cafe, y acceso a eventos para nuestros usuarios"
+    />
+    <Services
+      title="¿Puedo tener acceso a internet?"
+      body="Si, nuestros espacios cuentan con una conexion de alta velocidada internet para garantizar que puedas trabajar de manera eficiente "
+    />
+    <Services
+      title="¿Que ventajas tiene un espacio CoWorking?"
+      body="Un espacio CoWorking te brinda oportunidad de trabajar en un ambiente colaborativo , creativo y dinamico. Ideal para potenciar tu productividad y networking"
+    />
+  </section>
+
+  <section class="mb-20">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.735737166257!2d-75.5871935!3d6.1730548!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46830022c9cba9%3A0x3912ec3cbc535547!2sCon-siente%20Coworking!5e0!3m2!1sen!2scr!4v1711842303209!5m2!1sen!2scr"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      class="w-screen h-[40vw]"></iframe>
+  </section>
+
+  <section
+    class="grid grid-cols-2 w-[80%] m-auto items-center justify-center mb-10"
+  >
+    <div>
+      <form action="#">
+        <div class="mb-4 flex flex-col justify-center">
+          <label for="Name" class="text-xl">Nombre</label>
+          <input
+            class="rounded-xl bg-gray-500 text-white text-xl p-3"
+            type="text"
+            id="Name"
+          />
+        </div>
+
+        <div class="mb-4 flex flex-col justify-center">
+          <label for="Email" class="text-xl">Correo Electronico</label>
+          <input
+            class="rounded-xl bg-gray-500 text-white text-xl p-3"
+            type="email"
+            id="Email"
+          />
+        </div>
+
+        <div class="mb-4 flex flex-col justify-center">
+          <label for="Message" class="text-xl">Mensaje</label>
+          <textarea
+            class="rounded-xl bg-gray-500 text-white text-xl p-1.5 h-[255px]"
+            name="message"
+            id="Message"></textarea>
+        </div>
+
+        <a href="/"
+          ><button
+            type="submit"
+            class="bg-azul-marino text-white py-3 px-8 rounded-xl"
+            >Explora</button
+          ></a
+        >
+      </form>
+    </div>
+
+    <div class="flex flex-col justify-center ml-10">
+      <h3 class="text-4xl">Ponerse en contacto</h3>
+      <p class="text-xl text-gris">
+        Envianos un mensaje y nos comunicaremos contigo tan pronto como podamos
+      </p>
+    </div>
   </section>
 </Layout>

@@ -1,13 +1,83 @@
 ---
-
+import Popular from "./Icons/Popular.astro";
 ---
 
-<article class="w-1/4 border-2 border-gris bg-gris/20">
-  <h3 class="font-poppins text-bold text-xl">Espacio de trabajo compartido</h3>
-  <p class="font-poppins text-bold text-2xl leading-3">$100.000 <br> <span class="text-lg">por mes</span></p>
-  <button class="font-poppins bg-azul-marino text-white px-40 text-center">Más informacion</button>
-  <p class="font-poppins ">Un lugar ideal para colaborar y crear</p>
-  <p class="font-poppins ">Flexible</p>
-  <p class="font-poppins ">Comunidad</p>
-  <p class="font-poppins ">Wi-Fi</p>
-</article>
+<div class="flex items-center justify-center">
+  <article class="w-1/4 border-2 border-gris bg-gris/20 py-7 px-3 my-3">
+    <h3 class="font-Poppins font-semibold text-xl">
+      Espacio de trabajo compartido
+    </h3>
+    <p class="font-Poppins font-semibold text-2xl leading-3 my-3">
+      $100.000 <br />
+      <span class="text-lg">por mes</span>
+    </p>
+    <a
+      href="/"
+      class="font-Lato font-semibold bg-azul-marino text-white px-40 py-2 block m-auto rounded-xl"
+      >Más informacion</a
+    >
+    <p class="font-Lato font-semibold mt-4 text-lg">
+      Un lugar ideal para colaborar y crear
+    </p>
+    <p class="font-Lato font-medium text-lg before:content-['✔'] my-2">
+      Flexible
+    </p>
+    <p class="font-Lato font-medium text-lg before:content-['✔'] mb-2">
+      Comunidad
+    </p>
+    <p class="font-Lato font-medium text-lg before:content-['✔'] mb-20">
+      Wi-Fi
+    </p>
+  </article>
+
+  <article class="w-1/4 border-4 border-gris bg-gris/20 py-7 px-3 my-3">
+    <Popular />
+    <h3 class="font-Poppins font-semibold text-xl">Espacio privado</h3>
+    <p class="font-Poppins font-semibold text-2xl leading-3 my-3">
+      $200.000 <br />
+      <span class="text-lg">por mes</span>
+    </p>
+    <a
+      href="/"
+      class="font-Lato font-semibold bg-azul-marino text-white px-40 py-2 block m-auto rounded-xl"
+      >Más informacion</a
+    >
+    <p class="font-Lato font-semibold mt-4 text-lg">
+      Tu propio espacio para trabajar con comodidad
+    </p>
+    <p class="font-Lato font-medium text-lg before:content-['✔'] my-2">
+      Privacidad
+    </p>
+    <p class="font-Lato font-medium text-lg before:content-['✔'] mb-2">
+      Comodidad
+    </p>
+    <p class="font-Lato font-medium text-lg before:content-['✔'] mb-14">
+      Wi-Fi
+    </p>
+  </article>
+
+  <article class="w-1/4 border-2 border-gris bg-gris/20 py-7 px-3 my-3">
+    <h3 class="font-Poppins font-semibold text-xl">Oficina privada</h3>
+    <p class="font-Poppins font-semibold text-2xl leading-3 my-3">
+      $300.000 <br />
+      <span class="text-lg">por mes</span>
+    </p>
+    <a
+      href="/"
+      class="font-Lato font-semibold bg-azul-marino text-white px-40 py-2 block m-auto rounded-xl"
+      >Más informacion</a
+    >
+    <p class="font-Lato font-semibold mt-4 text-lg">
+      Un espacio completamente privado para tu negocio
+    </p>
+    <p class="font-Lato font-medium text-lg before:content-['✔'] my-2">
+      Exclusividad
+    </p>
+    <p class="font-Lato font-medium text-lg before:content-['✔'] mb-2">
+      Privacidad
+    </p>
+    <p class="font-Lato font-medium text-lg before:content-['✔'] mb-20">
+      Wi-Fi
+    </p>
+  </article>
+</div>
