@@ -2,8 +2,26 @@
 
 ---
 
+<script>
+  const $menu = document.getElementById("Open");
+  const $close = document.getElementById("Close");
+  const $body = document.getElementById("Body");
+
+  $menu.addEventListener("click", () => {
+    $body.classList.remove("hidden");
+    $menu.classList.add("hidden");
+    $close.classList.remove("hidden");
+  });
+
+  $close.addEventListener("click", () => {
+    $body.classList.add("hidden");
+    $menu.classList.remove("hidden");
+    $close.classList.add("hidden");
+  });
+</script>
+
 <nav
-  class="flex items-center justify-between bg-azul-marino text-white font-Lato"
+  class="lg:flex items-center justify-between bg-azul-marino text-white font-Lato hidden fixed w-screen top-0"
 >
   <a href="/"
     ><div class="flex items-center ml-10 p-3 gap-4">
@@ -18,16 +36,75 @@
     </div></a
   >
 
-  <div class="flex gap-10 mr-20 items-center">
-    <a href="/galery"><button class="bg-white text-azul-marino py-2 px-16 rounded-lg text-lg"
-      >Galeria</button
-    ></a>
-    
-    <a href="/"><i class="fa-brands fa-tiktok text-2xl cursor-pointer"></i></a>
+  <div class="flex gap-5 mr-20 items-center">
+    <a href="#Contact"
+      ><button
+        class="bg-white text-azul-marino py-2 px-16 rounded-lg text-lg hover:bg-gris hover:text-white transition-colors"
+        >Contactar</button
+      ></a
+    >
+
+    <a href="/" target="_blank" rel="noopener"
+      ><i
+        class="fa-brands fa-tiktok text-2xl cursor-pointer hover:text-azul-marino hover:bg-white p-3 rounded-3xl transition-all"
+      ></i></a
+    >
+    <a href="/" target="_blank" rel="noopener"
+      ><i
+        class="fa-brands fa-instagram text-2xl cursor-pointer hover:text-azul-marino hover:bg-white p-3 rounded-3xl transition-all"
+      ></i></a
+    >
+    <a href="/" target="_blank" rel="noopener"
+      ><i
+        class="fa-brands fa-facebook text-2xl cursor-pointer hover:text-azul-marino hover:bg-white p-3 rounded-3xl transition-all"
+      ></i></a
+    >
+  </div>
+</nav>
+
+<nav class="bg-azul-marino lg:hidden flex flex-col align-middle justify-evenly">
+  <div class="flex justify-between items-center">
     <a href="/"
-      ><i class="fa-brands fa-instagram text-2xl cursor-pointer"></i></a
+      ><div class="flex items-center ml-10 p-3 gap-4">
+        <img
+          src="/favicon.png"
+          alt="Consiente Coworking logo"
+          class="w-20 rounded-full"
+        />
+        <h1 class="text-white text-2xl font-Inter">
+          Con-siente <br /> CoWorking
+        </h1>
+      </div></a
     >
-    <a href="/"><i class="fa-brands fa-facebook text-2xl cursor-pointer"></i></a
+
+    <i class="fa-solid fa-bars mr-10 text-2xl text-white" id="Open"></i>
+    <i class="fa-solid fa-xmark mr-10 text-2xl text-white hidden" id="Close"
+    ></i>
+  </div>
+
+  <div class="flex flex-col items-center pt-10 hidden" id="Body">
+    <a href="#Contact"
+      ><button
+        class="bg-white text-azul-marino py-2 px-16 rounded-lg text-2xl hover:bg-gris hover:text-white transition-colors"
+        >Contactar</button
+      ></a
     >
+    <div class="flex text-white mt-20 gap-10">
+      <a href="/" target="_blank" rel="noopener"
+        ><i
+          class="fa-brands fa-tiktok text-4xl cursor-pointer hover:text-azul-marino hover:bg-white p-3 rounded-3xl transition-all"
+        ></i></a
+      >
+      <a href="/" target="_blank" rel="noopener"
+        ><i
+          class="fa-brands fa-instagram text-4xl cursor-pointer hover:text-azul-marino hover:bg-white p-3 rounded-3xl transition-all"
+        ></i></a
+      >
+      <a href="/" target="_blank" rel="noopener"
+        ><i
+          class="fa-brands fa-facebook text-4xl cursor-pointer hover:text-azul-marino hover:bg-white p-3 rounded-3xl transition-all"
+        ></i></a
+      >
+    </div>
   </div>
 </nav>
