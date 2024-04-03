@@ -173,36 +173,44 @@ import Popular from "../components/Icons/Popular.astro";
     class="md:grid grid-cols-2 md:w-[80%] m-auto items-center justify-center mb-10 flex flex-col-reverse"
   >
     <div id="Contact" class="w-[80%] md:w-[100%]">
-      <form action="#">
+      <form action="https://formsubmit.co/amikoscuenta@gmail.com" method="post">
         <div class="mb-4 flex flex-col justify-center">
-          <label for="Name" class="text-xl font-Lato">Nombre *</label>
+          <label for="name" class="text-xl font-Lato">Nombre *</label>
           <input
             class="rounded-xl bg-gray-500 text-white text-xl p-3 focus:bg-azul-marino focus:text-white"
             type="text"
-            id="Name"
+            name="name"
+            id="name"
             required
           />
         </div>
 
         <div class="mb-4 flex flex-col justify-center">
-          <label for="Email" class="text-xl font-Lato"
+          <label for="email" class="text-xl font-Lato"
             >Correo Electronico *</label
           >
           <input
             class="rounded-xl bg-gray-500 text-white text-xl p-3 focus:bg-azul-marino focus:text-white"
             type="email"
-            id="Email"
+            id="email"
+            name="email"
             required
           />
         </div>
 
         <div class="mb-4 flex flex-col justify-center">
-          <label for="Message" class="text-xl font-Lato">Mensaje *</label>
+          <label for="message" class="text-xl font-Lato">Mensaje *</label>
           <textarea
             class="rounded-xl bg-gray-500 text-white text-xl p-1.5 h-[255px] focus:bg-azul-marino focus:text-white"
             name="message"
-            id="Message"
+            id="message"
             required></textarea>
+
+          <input
+            type="hidden"
+            name="_next"
+            value="https://consiente-coworking.vercel.app/"
+          />
         </div>
 
         <a href="/"
