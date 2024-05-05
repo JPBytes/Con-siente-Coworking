@@ -9,12 +9,14 @@
 
   $menu.addEventListener("click", () => {
     $body.classList.remove("hidden");
+    $body.classList.add("flex");
     $menu.classList.add("hidden");
     $close.classList.remove("hidden");
   });
 
   $close.addEventListener("click", () => {
     $body.classList.add("hidden");
+    $body.classList.remove("flex");
     $menu.classList.remove("hidden");
     $close.classList.add("hidden");
   });
@@ -82,7 +84,7 @@
     ></i>
   </div>
 
-  <div class="flex flex-col items-center pt-10 hidden" id="Body">
+  <div class="flex-col items-center pt-10 hidden" id="Body">
     <a href="#Contact"
       ><button
         class="bg-white text-azul-marino py-2 px-16 rounded-lg text-2xl hover:bg-gris hover:text-white transition-colors"

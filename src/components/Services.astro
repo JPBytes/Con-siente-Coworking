@@ -8,32 +8,28 @@ const { title, body } = Astro.props;
 ---
 
 <script>
-  const $body = document.querySelectorAll(".body");
-  const $shows = document.querySelectorAll(".fa-chevron-down");
-  const $hiddens = document.querySelectorAll(".fa-chevron-up");
-  const $accordion = document.querySelectorAll(".accordion");
+  const $accordions = document.querySelectorAll(".accordion");
 
-  for (let i = 0; i < $shows.length; i++) {
-    $shows[i].addEventListener("click", () => {
-      $body[i].classList.remove("hidden");
-      $hiddens[i].classList.remove("hidden");
-      $shows[i].classList.add("hidden");
-    });
+  function toggleAccordion(index) {
+    const $body = $accordions[index].querySelector(".body");
+    const $show = $accordions[index].querySelector(".fa-chevron-down");
+    const $hidden = $accordions[index].querySelector(".fa-chevron-up");
 
-    $hiddens[i].addEventListener("click", () => {
-      $body[i].classList.add("hidden");
-      $hiddens[i].classList.add("hidden");
-      $shows[i].classList.remove("hidden");
-    });
+    $body.classList.toggle("hidden");
+    $show.classList.toggle("hidden");
+    $hidden.classList.toggle("hidden");
   }
 
-  for (let i = 0; i < $accordion.length; i++) {
-    $accordion[i].addEventListener("click", () => {
-      $body[i].classList.toggle("hidden");
-      $hiddens[i].classList.toggle("hidden");
-      $shows[i].classList.toggle("hidden");
+  $accordions.forEach((accordion, index) => {
+    accordion.addEventListener("click", () => {
+      toggleAccordion(index);
     });
-  }
+
+    accordion.addEventListener("touchstart", (event) => {
+      event.preventDefault();
+      toggleAccordion(index);
+    });
+  });
 </script>
 
 <div class="accordion cursor-pointer">
